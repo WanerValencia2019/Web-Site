@@ -1,0 +1,59 @@
+{% extends './base.html' %} {% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="{% static './css/fondo' %}"> {% block title %}
+    <title>Portafolio</title>
+    {% endblock title %}
+</head>
+{% block contenido %}
+<!--/ Section Portfolio Star /-->
+<section id="work" class="portfolio-mf sect-pt4 mt-5 route fondo2">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-box text-center card card-header-pills">
+                    <h3 class="title-a">
+                        Portafolio
+                    </h3>
+                    <p class="subtitle-a">
+                        Bienvenido, en esta sección encontrarás los proyectos que he realizado durante mi carrera
+                    </p>
+                    <div class="line-mf"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {% if portafolios %} {% for portafolio in portafolios %}
+            <div class="col-6">
+                <div class="work-box">
+                    <a href="./../media/{{portafolio.imagen}}" data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="./../media/{{portafolio.imagen}}" alt="" class="img-fluid">
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">{{portafolio.proyecto}}</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">{{portafolio.categoria.especialidad}}</span> / <span class="w-date">{{portafolio.fecha}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="ion-ios-plus-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endfor %} {% endif %}
+        </div>
+    </div>
+</section>
+<!--/ Section Portfolio End /-->
+
+{% endblock contenido %}

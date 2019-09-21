@@ -1,0 +1,131 @@
+{% extends './base.html' %} {% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="{% static './css/fondo.css' %}"> {% block title %}
+    <title>Servicios</title>
+    {% endblock title %}
+</head>
+
+{% block contenido %} {% if services %} {% for servicio in services %}
+
+<body id="page-top">
+    <section id="service" class="services-mf sect-pt4 mt-5 route fondo2">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="title-box text-center card card-header bg-light ">
+                        <h3 class="title-a">
+                            Servicios
+                        </h3>
+                        <p class="subtitle-a">
+                            {{servicio.servicios}}
+                        </p>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-unlocked"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Ethical Hacking</h2>
+                            <p class="s-description text-justify">
+                                {{servicio.hacking}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-code-working"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Desarrollo Web</h2>
+                            <p class="s-description text-center">
+                                {{servicio.web}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-videocamera"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Edición de Videos</h2>
+                            <p class="s-description text-center">
+                                {{servicio.videos}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Responsive Design</h2>
+                            <p class="s-description text-center">
+                                {{servicio.responsive}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-android-laptop"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Desarrollo de Software</h2>
+                            <p class="s-description text-center">
+                                {{servicio.software}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-android-cloud-done"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Bases de Datos</h2>
+                            <p class="s-description text-center">
+                                {{servicio.bd}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="copyright-box">
+                            <p class="copyright">&copy; Copyright <strong>Wnaes Vlamro S.A.S</strong>. All Rights Reserved</p>
+                            <div class="credits">
+                                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+                -->
+                                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+{% endfor %} {% endif %} {% endblock contenido %}

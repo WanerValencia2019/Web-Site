@@ -1,0 +1,18 @@
+@charset "utf-8";
+.fondo {
+    background: url('../img/logo svg/img3.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fondo2 {
+    background: url('../img/overlay-bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    font-size: 20px;
+}

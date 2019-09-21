@@ -1,0 +1,108 @@
+{% extends './base.html' %} {% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="{% static './css/fondo.css' %}"> {% block title %}
+    <title>Acerca de mí</title>
+    {% endblock title %}
+</head>
+{% block contenido %} {% if about %}{% for yo in about %}
+
+
+<section id="about" class="about-mf sect-pt4 mt-5 route fondo2">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <div class="about-img">
+                                        <img src="./../media/{{yo.imagen}}" class="img-fluid rounded b-shadow-a" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-7">
+                                    <div class="about-info">
+                                        <p><span class="title-s">Nombre: </span> <span>{{yo.name}}</span></p>
+                                        <p><span class="title-s">Perfil: </span> <span>{{yo.perfil}}</span></p>
+                                        <p><span class="title-s">Correo Electrónico: </span> <span>{{yo.correo}} </span></p>
+                                        <p><span class="title-s">Telefono: </span> <span>{{yo.telefono}}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-mf">
+                                <p class="title-s">Habilidades</p>
+                                <span>Ethical Hacking</span> <span class="pull-right">80%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>HTML</span> <span class="pull-right">85%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>CSS3</span> <span class="pull-right">80%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>Python-Django</span> <span class="pull-right">68%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>JAVASCRIPT</span> <span class="pull-right">40%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>JAVA</span> <span class="pull-right">50%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span>c#</span> <span class="pull-right">50%</span>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-me pt-4 pt-md-0 text lead text-justify">
+                                <div class="title-box-2">
+                                    <h5 class="title-left">
+                                        Acerca de mí
+                                    </h5>
+                                </div>
+
+                                <p class="">
+                                    {{yo.contenido|linebreaks}}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright-box">
+                        <p class="copyright">&copy; Copyright <strong>Wnaes Vlamro S.A.S</strong>. All Rights Reserved</p>
+                        <div class="credits">
+                            <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+                -->
+                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div id="preloader"></div>
+{% endfor %} {% endif %} {% endblock contenido %}

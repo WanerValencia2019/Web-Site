@@ -1,0 +1,101 @@
+{% extends './base.html' %}
+
+<head>
+
+    {% block title %}
+    <title>Contacto</title>
+    {% endblock title %}
+
+</head>
+
+{% block contenido %}
+<section class="paralax-mf footer-paralax bg-image  route fondo2">
+    <div class="overlay-mf"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="contact-mf">
+                    <div id="contact" class="box-shadow-full">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="title-box-2">
+                                    <h5 class="title-left">
+                                        Envíame un mensaje
+
+                                    </h5>
+                                </div>
+                                <div>
+                                    {% if 'ok' in request.GET %}
+                                    <p class="alert alert-success">Tu mensaje ha sido enviado con éxito. Muchas Gracias!</p>
+                                    {% endif %} {% if 'fail' in request.GET %}
+                                    <p class="alert alert-danger">Tu mensaje NO se ha podido enviar, por favor verifica tu conexión</p>
+                                    {% endif %}
+
+                                    <form method="post" action="{% url 'contacto'  %}" role="form">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <!---->
+
+                                            <div class="col-md-12 mb-3">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="asunto" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor ingresa un asunto de minimo  8 letras" />
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Por favor ingresa una dirección de correo electrónico válida" />
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-3">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" name="mensaje" rows="5" data-rule="required" data-msg="Por favor escribe un mensaje" placeholder="Mensaje"></textarea>
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button type="submit" class="button button-a button-big button-rouded">Enviar Mensaje</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="title-box-2 pt-4 pt-md-0">
+                                    <h5 class="title-left">
+                                        Contáctame
+                                    </h5>
+                                </div>
+                                <div class="more-info">
+                                    <p class="lead">
+                                        Hola Bienvenido, deseas contar con nuestros servicios, pues contáctanos y te brindaremos los mejores servicios y garantias, no esperes mas buscanos, esta es tu oportunidad.
+                                    </p>
+                                    <ul class="list-ico">
+                                        <li><span class="ion-ios-location"></span> Calle 26 #7 - 07 Barrio Alameda Reyes Quibdó,Chocó, Colombia
+                                        </li>
+                                        <li><span class="ion-ios-telephone"></span> (+57) 312-671-3537</li>
+                                        <li><span class="ion-email"></span> andrewvamo@protonmail.com</li>
+                                    </ul>
+                                </div>
+                                <div class="socials">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/wander.valenciamoreno"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                                        <li><a href="https://www.instagram.com/valenciamorenoandres/"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                                        <li><a href="https://mobile.twitter.com/WanerAndres"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
+                                        <li><a href="https://github.com/WanerValencia2019"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCotIhg0GsZXTj66OoCjHvYg?view_as=subscriber"><span class="ico-circle"><i class="ion-social-youtube"></i></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+    {% endblock contenido %}

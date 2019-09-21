@@ -1,0 +1,20 @@
+<svg width="170" height="170" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <linearGradient y2="0.328125" x2="0.757813" y1="0.144531" x1="0.375" id="svg_2">
+   <stop offset="0" stop-color="#3299ff"/>
+   <stop offset="1" stop-color="#cd6600"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#3d3d3d" id="canvas_background" height="172" width="172" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-style="italic" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="92" id="svg_1" y="113" x="12.59375" stroke-width="0" stroke="#000" fill="url(#svg_2)">Wv</text>
+ </g>
+</svg>
